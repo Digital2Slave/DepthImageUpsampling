@@ -6,18 +6,24 @@ int height = 0,    width = 0;
 int s_height = 0,  s_width = 0;
 int ScaleRate = 0, WinSize = 0;
 
-int main(int argc,char * argv[])
-{ 
-	Mat RefImage  = imread(argv[1],0);
-	Mat SrcImage  = imread(argv[2],0); 
-	ScaleRate = atoi(argv[3]);
+void help() {
+	cout << "Usage: \n"
+		<< "*.exe path_of_color_image path_of_disp_image scale_rate path_of_upsampling_image  path_of_badpixel_image\n"
+		<< "Example: \n"
+		<< "./TianSGU.exe view1.png disp1.png 2 Tianout2.png Tianbad2.png" << endl;
+}
 
+int main(int argc,char * argv[])
+{
 	if (argc != 6)
 	{
-		cout<<"Error!"<<endl;
-		cout<<"Please input the file again!"<<endl;
+		help();
 		return -1;
 	}
+
+	Mat RefImage = imread(argv[1], 0);
+	Mat SrcImage = imread(argv[2], 0);
+	ScaleRate = atoi(argv[3]);
 
 	height = SrcImage.rows;
 	width  = SrcImage.cols;
