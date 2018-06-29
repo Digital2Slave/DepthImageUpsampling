@@ -17,6 +17,12 @@ One new method for depth image upsampling.
 ```cmd
 D:\Github\DepthImageUpsampling\Debug\> TianSGU.exe view1.png disp1.png 2 Tianout2.png Tianbad2.png
 D:\Github\DepthImageUpsampling\Debug\>
+Imagescale #:2
+The time of Tian method is : 15.974
+BPR  : 0.515566%
+MSE  : 10.0913
+RMSE : 3.17669
+PSNR : 38.0913
 ```
 
 ## 3 Result
